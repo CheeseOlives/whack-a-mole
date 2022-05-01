@@ -161,3 +161,15 @@ body {
     block-size: 45vw;
   }
 }
+
+/* CHI STUFF */
+.leaderboard-details {
+  
+  display: flex;
+  gap: 1em
+
+}
+
+.leaderboard-name, .leaderboard-score {
+  outline: 2px solid red;
+}

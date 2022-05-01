@@ -130,3 +130,39 @@ newGame.addEventListener("click", (e) => {
   gameOver = false;
   restartGame();
 });
+
+
+//////////////////////////////////////
+///////////      CHI      ////////////
+//////////////////////////////////////
+
+//LEADERBOARD
+const nameDisplay = document.getElementById('leaderboard-name');
+
+const name_submit = document.forms['name-submit'];
+
+name_submit.addEventListener('submit', (e) => {
+e.preventDefault();
+const nameData = new FormData(name_submit);
+const {name} = Object.fromEntries(nameData);
+console.log("🚀 ~ file: main.js ~ line 158 ~ name_submit.addEventListener ~ name", name);
+name_submit.reset();
+handleNames(name);
+});
+
+const leaderboardNames = [];
+
+function handleNames(name){
+  leaderboardNames.push(name);
+  inputLeaderboardName();
+}
+
+function inputLeaderboardName() {
+  nameDisplay.textContent = leaderboardNames.join(', ');
+}
+
+//show the score
+const leaderboardScores = [];
+
+const leaderboard_score = document.getElementById('leaderboard-score');
+leaderboard_score.textContent = scoreCount;

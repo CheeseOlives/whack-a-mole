@@ -52,8 +52,30 @@
       </div>
       <div class="navigation">
         <div class="new-game" id="new-game">New game</div>
-        <div class="leaderboard" id="leaderboard">Leaderboard</div>
+
+
+        <div>
+          <div class="leaderboard" id="leaderboard">Leaderboard</div>
+         
+          <div id="leaderboard-details" class="leaderboard-details">
+            <div class="leaderboard-name">
+              <p>Name</p>
+              <span id="leaderboard-name">test name</span>:</div>
+
+            <div class="leaderboard-score">
+              <p>Score</p>
+              <span id="leaderboard-score">test score</span></div>
+
+          </div>
+        </div>
+
       </div>
+
+      <form name="name-submit">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="input-name">
+        <button type="submit" maxlength="10">Submit</button>
+      </form>
     </div>
-  </body>
+      </body>
 </html>
