@@ -225,6 +225,8 @@ console.log("🚀 ~ file: main.js ~ line 158 ~ name_submit.addEventListener ~ na
 name_submit.reset();
 handleNames(name);
 console.log('name array', leaderboardNames);
+handleScores();
+console.log('score array', leaderboardScores);
 });
 
 const leaderboardNames = [];
@@ -238,16 +240,25 @@ function handleNames(name){
   leaderboardName5.textContent = leaderboardNames[4];
 }
 
-/////something to hide a list item if it is blank?//
-
 ////////////////////////////////////////////////////
 /////////////////////// SCORE //////////////////////
 ////////////////////////////////////////////////////
 
-////// STILL IN PROGRESS/////////////
-
 //show the score
-// const leaderboardScores = [];
+const leaderboardScores = [];
 
-// const leaderboard_score = document.getElementById('leaderboard-score');
-// leaderboard_score.textContent = scoreCount;
+const score1 = document.getElementById('score1');
+const score2 = document.getElementById('score2');
+const score3 = document.getElementById('score3');
+const score4 = document.getElementById('score4');
+const score5 = document.getElementById('score5');
+
+function handleScores(score) {
+  score = scoreCount.innerHTML;
+  leaderboardScores.push(score);
+score1.textContent = leaderboardScores[0];
+score2.textContent = leaderboardScores[1];
+score3.textContent = leaderboardScores[2];
+score4.textContent = leaderboardScores[3];
+score5.textContent = leaderboardScores[4];
+}
