@@ -58,9 +58,19 @@
           <div class="leaderboard" id="leaderboard">Leaderboard</div>
          
           <div id="leaderboard-details" class="leaderboard-details">
-            <div class="leaderboard-name">
+            <div class="leaderboard-names">
               <p>Name</p>
-              <span id="leaderboard-name">test name</span>:</div>
+
+                 <ol id="name-list">
+                  <li id="leaderboard-name1" class="leaderboard-name"></li>
+                  <li id="leaderboard-name2" class="leaderboard-name"></li>
+                  <li id="leaderboard-name3" class="leaderboard-name "></li>
+                  <li id="leaderboard-name4" class="leaderboard-name"></li>
+                  <li id="leaderboard-name5" class="leaderboard-name hide-names"></li>
+                </ol>
+              
+              </div>
+
 
             <div class="leaderboard-score">
               <p>Score</p>
@@ -73,8 +83,8 @@
 
       <form name="name-submit">
         <label for="name">Name</label>
-        <input type="text" name="name" id="input-name">
-        <button type="submit" maxlength="10">Submit</button>
+        <input type="text" name="name" id="input-name" minlength="2" maxlength="10" required>
+        <button type="submit">Submit</button>
       </form>
     </div>
       </body>

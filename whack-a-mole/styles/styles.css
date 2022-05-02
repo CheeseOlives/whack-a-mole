@@ -170,6 +170,6 @@ body {
 
 }
 
-.leaderboard-name, .leaderboard-score {
+.leaderboard-names, .leaderboard-score {
   outline: 2px solid red;
 }

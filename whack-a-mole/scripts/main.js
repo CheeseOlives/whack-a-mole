@@ -136,8 +136,84 @@ newGame.addEventListener("click", (e) => {
 ///////////      CHI      ////////////
 //////////////////////////////////////
 
-//LEADERBOARD
-const nameDisplay = document.getElementById('leaderboard-name');
+///////////////////////////////////////////////
+/////////////////////LEADERBOARD///////////////
+///////////////////////////////////////////////
+
+//////////////// draft 1 ///////////////
+////////////////////////////////////////
+// const nameDisplay = document.getElementById('leaderboard-name');
+
+
+// const name_submit = document.forms['name-submit'];
+
+// name_submit.addEventListener('submit', (e) => {
+// e.preventDefault();
+// const nameData = new FormData(name_submit);
+// const {name} = Object.fromEntries(nameData);
+// console.log("🚀 ~ file: main.js ~ line 158 ~ name_submit.addEventListener ~ name", name);
+// name_submit.reset();
+// handleNames(name);
+// });
+
+// const leaderboardNames = [];
+
+// function handleNames(name){
+//   leaderboardNames.push(name);
+//   inputLeaderboardName();
+// }
+
+// function inputLeaderboardName() {
+//   nameDisplay.textContent = leaderboardNames.join(', ');
+// }
+
+// function handleNames(name){
+//   leaderboardNames.push(name);
+//   inputLeaderboardName();
+//  }
+
+///////////////////draft 2//////////////////
+////////////////////////////////////////////
+// const nameDisplay = document.getElementById('leaderboard-name');
+
+
+// const name_submit = document.forms['name-submit'];
+
+// name_submit.addEventListener('submit', (e) => {
+// e.preventDefault();
+// const nameData = new FormData(name_submit);
+// const {name} = Object.fromEntries(nameData);
+// console.log("🚀 ~ file: main.js ~ line 158 ~ name_submit.addEventListener ~ name", name);
+// name_submit.reset();
+// handleNames(name);
+// });
+
+// const leaderboardNames = [];
+
+// const ol = document.getElementById('name-list');
+// const newName = document.createElement("li");
+
+// function handleNames(name){
+//   leaderboardNames.push(name);
+//   // inputLeaderboardName();
+  
+//   leaderboardNames.forEach(function(name, index) {
+//         ol.appendChild(newName);    
+//     nameDisplay.textContent = name;
+//   })
+// }
+
+/////////////////////// draft 3 ////////////////////
+////////////////////////////////////////////////////
+const nameDisplay = document.getElementById('leaderboard-name1');
+
+const leaderboardName1 = document.getElementById('leaderboard-name1');
+const leaderboardName2 = document.getElementById('leaderboard-name2');
+const leaderboardName3 = document.getElementById('leaderboard-name3');
+const leaderboardName4 = document.getElementById('leaderboard-name4');
+const leaderboardName5 = document.getElementById('leaderboard-name5');
+
+const hideList = document.getElementsByClassName('leaderboard-name');
 
 const name_submit = document.forms['name-submit'];
 
@@ -148,21 +224,30 @@ const {name} = Object.fromEntries(nameData);
 console.log("🚀 ~ file: main.js ~ line 158 ~ name_submit.addEventListener ~ name", name);
 name_submit.reset();
 handleNames(name);
+console.log('name array', leaderboardNames);
 });
 
 const leaderboardNames = [];
 
 function handleNames(name){
   leaderboardNames.push(name);
-  inputLeaderboardName();
+  leaderboardName1.textContent = leaderboardNames[0];
+  leaderboardName2.textContent = leaderboardNames[1];
+  leaderboardName3.textContent = leaderboardNames[2];
+  leaderboardName4.textContent = leaderboardNames[3];
+  leaderboardName5.textContent = leaderboardNames[4];
 }
 
-function inputLeaderboardName() {
-  nameDisplay.textContent = leaderboardNames.join(', ');
-}
+/////something to hide a list item if it is blank?//
+
+////////////////////////////////////////////////////
+/////////////////////// SCORE //////////////////////
+////////////////////////////////////////////////////
+
+////// STILL IN PROGRESS/////////////
 
 //show the score
-const leaderboardScores = [];
+// const leaderboardScores = [];
 
-const leaderboard_score = document.getElementById('leaderboard-score');
-leaderboard_score.textContent = scoreCount;
+// const leaderboard_score = document.getElementById('leaderboard-score');
+// leaderboard_score.textContent = scoreCount;
